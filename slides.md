@@ -65,55 +65,18 @@ TODO: add pictures of rendered models here
 - **Not** planning on developing a game with it.
 
 ---
-layout: two-cols-header
----
 
 # How do we render a 3D model?
 
-We're gunna need to tell our GPU a few things about our scene:
+<div style="background-color: #444444; height: 90%; border-radius: 10px; width: fit-content;">
+<img src="./assets/vulkan_simplified_pipeline.svg" style="height: 100%;" />
+</div>
 
-::left::
+---
 
-<ul>
-  <li v-click>Lights
-    <ul>
-      <li>position</li>
-      <li>color</li>
-      <li>intensity</li>
-      <li>type (point, directional, spotlight, etc.)</li>
-    </ul>
-  </li>
-  <li v-click>Cameras
-    <ul>
-      <li>model, view, and projection matrices</li>
-    </ul>
-  </li>
-</ul>
+# Frame Breakdown
 
-::right::
-<ul>
-  <li v-click>Objects
-    <ul>
-      <li>per-vertex data
-        <ul>
-          <li>texture coordinates</li>
-          <li>normal vectors</li>
-          <li>positions</li>
-        </ul>
-      </li>
-      <li>color</li>
-      <li>intensity</li>
-      <li>type (point, directional, spotlight, etc.)</li>
-    </ul>
-  </li>
-  <li v-click>Code
-    <ul>
-      <li>vertex shaders</li>
-      <li>fragment shaders</li>
-      <li>compute shaders</li>
-    </ul>
-  </li>
-</ul>
+<img style="90%" src="./assets/frame_breakdown.png" />
 
 ---
 
@@ -176,12 +139,6 @@ ResourceManager <|-- MaterialManager
 ResourceManager <|-- TextureManager 
 
 ```
----
-layout: image
-image: /assets/frame_breakdown.png
----
-
-# Frame Breakdown
 
 ---
 
@@ -218,9 +175,3 @@ Some optimizations
 - Clustered rendering
 - Compressing normal textures using signed octahedron normal encoding
 - Render graph
-
----
-layout: center
----
-
-# Demo
